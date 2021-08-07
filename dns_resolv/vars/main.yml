@@ -1,0 +1,4 @@
+---
+# vars file for dns_resolv
+nic_path: /etc/sysconfig/network-scripts/ifcfg-eth0
+dns_address: 192.168.50.31

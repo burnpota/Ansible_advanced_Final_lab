@@ -1,0 +1,14 @@
+---
+# tasks file for satellite_regi
+- name: Install Satellite CA
+  yum:
+    name: "{{ satellite_conf.CA_rpm }}"
+    state: present
+    disable_gpg_check: yes
+
+- name: Register Satellite
+  redhat_subscription:
+    org_id: "{{ satellite_conf.org_id }}"
+    activationkey: "{{ satellite_conf.activationkey }}"
+    auto_attach: yes
+    state: present

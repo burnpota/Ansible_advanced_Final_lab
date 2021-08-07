@@ -1,0 +1,5 @@
+---
+# vars file for in-memory
+guid: befd
+home: /home/devops
+internal_domain: example.com

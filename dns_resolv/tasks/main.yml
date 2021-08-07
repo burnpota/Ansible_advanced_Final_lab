@@ -1,0 +1,21 @@
+---
+# tasks file for dns_resolv
+- name: Set up DNS reslov
+  blockinfile:
+    path: "{{ nic_path }}"
+    block: |
+      PEERDNS=no
+      DNS1={{ dns_address }}
+
+- name: restart Network Manager
+  systemd:
+    name: NetworkManager
+    state: restarted
+
+- name: test setiing
+  shell:
+    cmd: cat "{{ nic_path }}"
+  register: net_set
+
+- debug:
+    msg: "{{ net_set }}"

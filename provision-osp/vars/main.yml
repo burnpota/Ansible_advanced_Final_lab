@@ -1,0 +1,42 @@
+---
+# vars file for provision-osp
+instances:
+  - name: appdb1
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: befd-HostSG
+    internal_network: befd-dev-network
+    keypair: befd-keypair
+    metadata:
+      AnsibleGroup: osp_instances
+      deployment_name: dev
+
+  - name: app1
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: befd-HostSG
+    internal_network: befd-dev-network
+    keypair: befd-keypair
+    metadata:
+      AnsibleGroup: osp_instances
+      deployment_name: dev
+
+  - name: app2
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: befd-HostSG
+    internal_network: befd-dev-network
+    keypair: befd-keypair
+    metadata:
+      AnsibleGroup: osp_instances
+      deployment_name: dev
+
+  - name: frontend1
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: befd-HostSG
+    internal_network: befd-dev-network
+    keypair: befd-keypair
+    metadata:
+      AnsibleGroup: osp_instances
+      deployment_name: dev

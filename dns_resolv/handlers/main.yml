@@ -1,0 +1,6 @@
+---
+# handlers file for dns_resolv
+- name: restart_NetworkManager
+  systemd:
+    name: NetworkManager
+    state: restarted

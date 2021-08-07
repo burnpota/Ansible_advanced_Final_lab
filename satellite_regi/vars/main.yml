@@ -1,0 +1,6 @@
+---
+# vars file for satellite_regi
+satellite_conf:
+  CA_rpm: "http://satellite.example.com/pub/katello-ca-consumer-latest.noarch.rpm"
+  org_id: prod
+  activationkey: gpte-labs-rhel8
